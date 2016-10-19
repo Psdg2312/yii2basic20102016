@@ -42,8 +42,9 @@ AppAsset::register($this);
         'encodeLabels'=>false,
         'items' => [
             ['label' => '<span class ="glyphicon glyphicon-home"></span> หน้าแรก', 'url' => ['/site/index']],
-            ['label' => '<span class ="glyphicon glyphicon-heart"></span> เกี่ยวกับเรา', 'url' => ['/site/about']],
-            ['label' => '<span class ="glyphicon glyphicon-user"></span>ติดต่อ', 'url' => ['/site/contact']],
+            ['label' => '<span class ="glyphicon glyphicon-heart"></span> เกี่ยวกับเรา', 'url' => ['/site/about']],         
+            ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
+            ['label' => 'ทดสอบ1', 'url' => ['/first1/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
