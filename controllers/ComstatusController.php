@@ -66,7 +66,7 @@ class ComstatusController extends Controller
         $model = new ComStatus();
         
       if(Yii::$app->request->post()){
-          Yii::$app->request->post('ComStatus');
+          $model=Yii::$app->request->post('ComStatus');
           print_r ($model);
           
           echo '<hr>';
