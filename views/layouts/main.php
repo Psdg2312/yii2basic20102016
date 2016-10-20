@@ -40,6 +40,17 @@ AppAsset::register($this);
     
     $setting=[
         ['label' => 'สถานะคอมพิวเตอร์', 'url' => ['/comstatus']],
+        ['label' => 'ประเภทคอมพิวเตอร์', 'url' => ['/com-type']],
+    ];
+    
+    $regist=[
+        ['label' => 'ทะเบียนคอมพิวเตอร์', 'url' => ['/comstatus']],
+    ];
+    
+    $report=[
+        ['label' => 'รายงานคอมพิวเตอร์', 'url' => ['/reportcomtype']],
+        ['label' => 'รายงานปัญหาคอมพิวเตอร์', 'url' => ['/reportcomservice']],
+        ['label' => 'รายงาน chart', 'url' => ['/reportcomchart']],
     ];
     
     echo Nav::widget([
@@ -47,8 +58,8 @@ AppAsset::register($this);
         'encodeLabels'=>false,
         'items' => [
             ['label' => '<span class ="glyphicon glyphicon-home"></span> หน้าแรก', 'url' => ['/site/index']],
-            ['label' => '<span class ="glyphicon glyphicon-heart"></span> เกี่ยวกับเรา', 'url' => ['/site/about']],         
-            ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
+            ['label' => 'ลงทะเบียน', 'items' => $regist],
+            ['label' => 'ระบบรายงาน', 'items' => $report],
             ['label' => 'ทดสอบ1', 'url' => ['/first1/index']],
             ['label' => 'ตั้งค่าระบบ', 'items' => $setting],
             Yii::$app->user->isGuest ? (

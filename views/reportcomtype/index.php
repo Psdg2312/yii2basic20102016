@@ -1,0 +1,32 @@
+ <?php 
+use yii\helpers\Html;
+
+ ?>
+<table class="table table-bordered">
+    <thead>
+      <tr class = "info">
+        <th>ลำดับ</th>
+        <th>รหัสประเภท</th>
+        <th>ประเภทคอม</th>
+        <th></th>
+             </tr>
+    </thead>
+    <tbody>
+                
+        <?php 
+        foreach ($data as $i=>$item) {
+        echo '<tr>';
+        echo '<td>'.($i+1).'</td>';
+        echo '<td>'.$item['com_type_id'].'</td>';
+        echo '<td>'.$item['com_type_name'].'</td>';
+        echo '<td>'.Html::a('<span class="glyphicon glyphicon-pencil"></span>', ['/report_com_detail','id'=>$item['com_type_id']]).'</td>';
+        echo '</tr>';
+        }
+        
+        ?>
+        
+      
+     
+    </tbody>
+  </table>
+
